@@ -17,6 +17,7 @@ step_mul = 8
 FLAGS = flags.FLAGS
 FLAGS(sys.argv)
 
+
 def main():
   FLAGS(sys.argv)
   with sc2_env.SC2Env(
@@ -30,6 +31,7 @@ def main():
       dueling=True
     )
 
+    #max_timesteps = 2000000
     act = deepq_mineral_shards.learn(
       env,
       q_func=model,
@@ -40,7 +42,7 @@ def main():
       exploration_fraction=0.5,
       exploration_final_eps=0.01,
       train_freq=4,
-      #learning_starts=100000,
+      learning_starts=100000,
       target_network_update_freq=1000,
       gamma=0.99,
       prioritized_replay=True
