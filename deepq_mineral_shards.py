@@ -356,8 +356,7 @@ def learn(env,
 
       #select marines
       player_relative = obs[0].observation["screen"][_PLAYER_RELATIVE]
-      screen = player_relative
-      player_relative = obs[0].observation["screen"][_PLAYER_RELATIVE]
+      screen = player_relative + path_memory
       player = []
       
       while(len(group_list)>0):
