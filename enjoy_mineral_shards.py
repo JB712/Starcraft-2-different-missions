@@ -14,6 +14,7 @@ import deepq_mineral_shards
 
 _UNIT_TYPE = features.SCREEN_FEATURES.unit_type.index
 _SELECTED = features.SCREEN_FEATURES.selected.index
+_PLAYER_RELATIVE = features.SCREEN_FEATURES.player_relative.index
 _PLAYER_FRIENDLY = 1
 _PLAYER_NEUTRAL = 3  # beacon/minerals
 _PLAYER_HOSTILE = 4

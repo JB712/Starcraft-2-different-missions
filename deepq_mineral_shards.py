@@ -528,8 +528,8 @@ def learn(env,
             group_list.append(group_id)
             group_id += 1
         
-      episode_rewards.append(0.0)
-      reset = True
+          episode_rewards.append(0.0)
+          reset = True
 
       if t > learning_starts and t % train_freq == 0:
         # Minimize the error in Bellman's equation on a batch sampled from replay buffer.
